@@ -148,3 +148,4 @@ USE_TZ = True
 
 
 LOGIN_REDIRECT_URL = 'index'  # Or the correct name of the URL for your index page
+LOGOUT_REDIRECT_URL = 'login'

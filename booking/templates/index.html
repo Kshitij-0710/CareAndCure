@@ -103,7 +103,7 @@
               <div class="quote_btn-container">
                 {% if user.is_authenticated %}
                 <span style="color: white; margin-right: 20px;">Welcome {{ user.username }}</span>
-                    <a href="{% url 'login' %}">  <!-- Adjust the URL name for logout as needed -->
+                    <a href="{% url 'logout' %}">  <!-- Adjust the URL name for logout as needed -->
                         <i class="fa fa-sign-out" aria-hidden="true"></i>
                         <span>Logout</span>
                     </a>

@@ -40,7 +40,7 @@ def login(request):
     else:
         form = AuthenticationForm()
     return render(request, "login.html", {"form": form})
-
+from django.contrib.auth import logout
 @login_required
 def submit_appointment(request):
     if request.method == 'POST':
@@ -80,3 +80,9 @@ def meds(request):
     return render(request,'medicine.html')
 def Teams(request):
     return render(request, 'teams.html')
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+
+def logout_view(request):
+    logout(request)  # This clears the session
+    return redirect('login')  # Redirect to login page
